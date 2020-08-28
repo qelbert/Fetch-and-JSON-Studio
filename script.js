@@ -4,6 +4,7 @@ window.addEventListener("load", function(){
     fetch("https://handlers.education.launchcode.org/static/astronauts.json").then(function(response){
       response.json().then(function(json) {
         const destination = document.getElementById("container");
+        let title = document.getElementById("title")
         for (let i=0; i<json.length; i++) {
           let obj = json[i];
           let section = `
@@ -19,6 +20,7 @@ window.addEventListener("load", function(){
               <img class="avatar" src="${obj.picture}">
             </div> 
             `   
+            title.innerHTML = `<h2>${i} Astronauts</h2>`;
             destination.innerHTML += section;
         }
       });
