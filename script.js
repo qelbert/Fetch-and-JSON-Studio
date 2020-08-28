@@ -20,9 +20,12 @@ window.addEventListener("load", function(){
               <img class="avatar" src="${obj.picture}">
             </div> 
             `   
-            title.innerHTML = `<h2>${i} Astronauts</h2>`;
+            title.innerHTML = `<h2>${i+1} Astronauts</h2>`;
             destination.innerHTML += section;
+ 
         }
       });
     });
+
+
   });
